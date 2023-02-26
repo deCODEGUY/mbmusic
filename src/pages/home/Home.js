@@ -57,7 +57,7 @@ export function ExampleAudio() {
 const audioTrackList = [
   {
     // string - path to audio file, required
-    src: "/path/to/audio/file",
+    src: "./assets/audio/Montage2018.mp3",
 
     // string - 'none' | 'metadata' | 'auto', default: 'auto', optional
     preload: "auto",
@@ -73,9 +73,9 @@ const audioTrackList = [
     // https://developer.mozilla.org/en-US/docs/Web/API/MediaMetadata/MediaMetadata
     // optional
     mediaMetadata: {
-      title: "Lesser Faith",
-      artist: "J. Syreus Bach",
-      album: "Ability to Break ~ Energetic Tracks",
+      title: "Montage 2018",
+      artist: "Mike Baker",
+      album: "2018 Demos",
       artwork: [
         { src: "/path/to/image/64px/64px", sizes: "64x64", type: "image/png" },
         {
@@ -86,7 +86,130 @@ const audioTrackList = [
       ],
     },
   },
-  // other tracks here...
+  {
+    // string - path to audio file, required
+    src: "./assets/audio/AnotherRound.mp3",
+
+    // string - 'none' | 'metadata' | 'auto', default: 'auto', optional
+    preload: "auto",
+
+    // duration - number, default: 0, optional
+    // will updated automatically when track started or metadata loaded
+    duration: 100,
+
+    // JSX.Element - custom content instead of title, optional, deafult: <title> or <src>
+    content: undefined, //<CustomContent />,
+
+    // MediaMetadata - media meta data, see `mediaMetadata` above
+    // https://developer.mozilla.org/en-US/docs/Web/API/MediaMetadata/MediaMetadata
+    // optional
+    mediaMetadata: {
+      title: "Another Round",
+      artist: "Mike Baker",
+      album: "Demos from 2022",
+      artwork: [
+        { src: "/path/to/image/64px/64px", sizes: "64x64", type: "image/png" },
+        {
+          src: "/path/to/image/128px/128px",
+          sizes: "128x128",
+          type: "image/png",
+        },
+      ],
+    },
+  },
+  {
+    // string - path to audio file, required
+    src: "./assets/audio/Gone4GoodThisTime.mp3",
+
+    // string - 'none' | 'metadata' | 'auto', default: 'auto', optional
+    preload: "auto",
+
+    // duration - number, default: 0, optional
+    // will updated automatically when track started or metadata loaded
+    duration: 100,
+
+    // JSX.Element - custom content instead of title, optional, deafult: <title> or <src>
+    content: undefined, //<CustomContent />,
+
+    // MediaMetadata - media meta data, see `mediaMetadata` above
+    // https://developer.mozilla.org/en-US/docs/Web/API/MediaMetadata/MediaMetadata
+    // optional
+    mediaMetadata: {
+      title: "Gone 4 Good This Time",
+      artist: "Mike Baker",
+      album: "Demos from 2022",
+      artwork: [
+        { src: "/path/to/image/64px/64px", sizes: "64x64", type: "image/png" },
+        {
+          src: "/path/to/image/128px/128px",
+          sizes: "128x128",
+          type: "image/png",
+        },
+      ],
+    },
+  },
+  {
+    // string - path to audio file, required
+    src: "./assets/audio/WhenINeedU.mp3",
+
+    // string - 'none' | 'metadata' | 'auto', default: 'auto', optional
+    preload: "auto",
+
+    // duration - number, default: 0, optional
+    // will updated automatically when track started or metadata loaded
+    duration: 100,
+
+    // JSX.Element - custom content instead of title, optional, deafult: <title> or <src>
+    content: undefined, //<CustomContent />,
+
+    // MediaMetadata - media meta data, see `mediaMetadata` above
+    // https://developer.mozilla.org/en-US/docs/Web/API/MediaMetadata/MediaMetadata
+    // optional
+    mediaMetadata: {
+      title: "When I Need U",
+      artist: "Mike Baker",
+      album: "Demos from 2022",
+      artwork: [
+        { src: "/path/to/image/64px/64px", sizes: "64x64", type: "image/png" },
+        {
+          src: "/path/to/image/128px/128px",
+          sizes: "128x128",
+          type: "image/png",
+        },
+      ],
+    },
+  },
+  {
+    // string - path to audio file, required
+    src: "./assets/audio/WMT.mp3",
+
+    // string - 'none' | 'metadata' | 'auto', default: 'auto', optional
+    preload: "auto",
+
+    // duration - number, default: 0, optional
+    // will updated automatically when track started or metadata loaded
+    duration: 100,
+
+    // JSX.Element - custom content instead of title, optional, deafult: <title> or <src>
+    content: undefined, //<CustomContent />,
+
+    // MediaMetadata - media meta data, see `mediaMetadata` above
+    // https://developer.mozilla.org/en-US/docs/Web/API/MediaMetadata/MediaMetadata
+    // optional
+    mediaMetadata: {
+      title: "Waste My Time",
+      artist: "Mike Baker",
+      album: "Demos from 2022",
+      artwork: [
+        { src: "/path/to/image/64px/64px", sizes: "64x64", type: "image/png" },
+        {
+          src: "/path/to/image/128px/128px",
+          sizes: "128x128",
+          type: "image/png",
+        },
+      ],
+    },
+  },
 ];
 
 export function ExampleAudioPlayer() {
@@ -130,9 +253,10 @@ const Home = () => {
       </h1>
       <div className="fixed bottom-0 pb-14 md:pb-10 lg:pb-10 right-10 left-10">
         <div className="font-semibold  text-white uppercase tracking-[6px] pb-3">
-          Montage 2018
+          Miscellaneous Demos from 2018-2022
         </div>
-        <ExampleAudio />
+        <ExampleAudioPlayer />
+        {/* <ExampleAudio /> */}
       </div>
     </div>
   );
